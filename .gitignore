@@ -23,10 +23,6 @@ nbactions.xml
 nb-configuration.xml
 .nb-gradle/
 
-# Eclipse
-.classpath
-.settings/
-
 # Intellij
 .idea/
 *.iml
