@@ -42,5 +42,8 @@ public class PostMethodQuiz10 extends HttpServlet{
 		}
 		out.print(userMap.get("name") + "님 환영합니다!");
 		out.print("</body></html>");
-	}
+		
+		
+		out.print(""); // 테스트를 위한 불필요한 코드
+		}
 }
