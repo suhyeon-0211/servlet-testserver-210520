@@ -20,6 +20,7 @@
 	%>
 	<div class="container">
 		<h1 class="text-center pt-3">장보기 목록</h1>
+		<%-- <h1 class="text-center pt-3">장보기 목록</h1>
 		<hr>
 		<div class="d-flex text-center font-weight-bold">
 			<span class="col-4">번호</span>
@@ -35,7 +36,27 @@
 		</div>
 		<%
 			}
-		%>
+		%> --%>
+		<table class="table text-center">
+			<thead>
+				<tr>
+					<th>번호</th>
+					<th>품목</th>
+				</tr>
+			</thead>
+			<tbody>
+				<%
+				for (int i = 0; i < goodsList.size(); i++) {
+				%>
+				<tr>
+					<td><%= i + 1 %></td>
+					<td><%= goodsList.get(i) %></td>
+				</tr>
+				<%
+				}
+				%>
+			</tbody>
+		</table>
 	</div>
 </body>
 </html>
