@@ -49,7 +49,7 @@
 						Map<String, Object> tempMap = iter.next();
 						if (tempMap.get("menu").equals(menu)) {
 							if(except != null) {
-								if (Double.parseDouble(tempMap.get("point").toString()) > 4.0) {
+								if (Double.parseDouble(tempMap.get("point").toString()) >= 4.0) {
 				%>
 				<tr>
 					<td><%= tempMap.get("name") %></td>
