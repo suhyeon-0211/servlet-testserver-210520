@@ -67,7 +67,7 @@
 				for (Map<String, Object> tempMap : list) {
 				 	if(tempMap.get("id").toString().equals(id)) {
 			%>
-			<img alt="" src="<%= tempMap.get("image")%>" width="200">
+			<img alt="표지" src="<%= tempMap.get("image")%>" width="200">
 			
 			<div>
 				<h1 class="font-weight-bold display-2"><%= tempMap.get("title") %></h1>
