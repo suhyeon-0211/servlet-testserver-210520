@@ -77,7 +77,6 @@
 					<td><%= tempMap.get("id") %></td>
 					<td><img src="<%= tempMap.get("image") %>" alt="book" width="50" name="image"></td>
 					<td><a href="<%= address %>"><%= tempMap.get("title") %></a></td>
-					<td hidden="1" name="ddd">ddd</td>
 				</tr>
 				<%
 					}

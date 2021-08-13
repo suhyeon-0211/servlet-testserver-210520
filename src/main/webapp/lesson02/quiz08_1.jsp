@@ -60,7 +60,6 @@
     list.add(map);
     
     String id = request.getParameter("id");
-    out.print(request.getParameter("ddd"));
 	%>
 	<div class="container">
 		<div class="d-flex">
