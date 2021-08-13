@@ -19,15 +19,16 @@
 		Calendar thisMonth = Calendar.getInstance();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
 		thisMonth.add(Calendar.MONTH, -5);
+		thisMonth.set(Calendar.DATE, thisMonth.getActualMaximum(Calendar.DATE));
+		int weeksOfMonth = thisMonth.get(Calendar.WEEK_OF_MONTH);;
 		thisMonth.set(Calendar.DATE, 1);
-		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-		int weeksOfMonth = 0;
+		/* Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 		while(thisMonth.get(Calendar.MONTH) == 2) {
 			map.put(thisMonth.get(Calendar.DATE), thisMonth.get(Calendar.DAY_OF_WEEK));
 			weeksOfMonth = thisMonth.get(Calendar.WEEK_OF_MONTH);
 			thisMonth.add(Calendar.DATE, 1);
-		}
-		thisMonth.add(Calendar.MONTH, -1);
+		} */
+		/* thisMonth.add(Calendar.MONTH, -1); */
 	%>
 	
 	
@@ -47,17 +48,18 @@
 			</thead>
 			<tbody>
 				<%
-					Integer index = 1;
+					int date = 1;
 					for (int i = 0; i < weeksOfMonth; i++) {
 				%>
 				<tr class="display-4">
 					<%
 						for (int j = 1; j <= 7; j++) {
-							if (map.get(index) != null && map.get(index) == j) {
+							if (thisMonth.get(Calendar.DAY_OF_WEEK) == j && thisMonth.get(Calendar.MONTH) == 2) {
 					%>
-					<td><%= index %></td>
+					<td><%= date %></td>
 					<%
-								index++;
+								date++;
+								thisMonth.add(Calendar.DATE, 1);
 							} else {
 					%>
 					<td></td>
