@@ -22,6 +22,7 @@
 		thisMonth.set(Calendar.DATE, thisMonth.getActualMaximum(Calendar.DATE));
 		int weeksOfMonth = thisMonth.get(Calendar.WEEK_OF_MONTH);;
 		thisMonth.set(Calendar.DATE, 1);
+		int month = thisMonth.get(Calendar.MONTH);
 		/* Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 		while(thisMonth.get(Calendar.MONTH) == 2) {
 			map.put(thisMonth.get(Calendar.DATE), thisMonth.get(Calendar.DAY_OF_WEEK));
@@ -54,7 +55,7 @@
 				<tr class="display-4">
 					<%
 						for (int j = 1; j <= 7; j++) {
-							if (thisMonth.get(Calendar.DAY_OF_WEEK) == j && thisMonth.get(Calendar.MONTH) == 2) {
+							if (thisMonth.get(Calendar.DAY_OF_WEEK) == j && thisMonth.get(Calendar.MONTH) == month) {
 					%>
 					<td><%= date %></td>
 					<%
