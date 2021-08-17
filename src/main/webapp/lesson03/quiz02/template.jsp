@@ -15,6 +15,7 @@
 	<div class="container">
 		<jsp:include page="header.jsp"></jsp:include>
 		<jsp:include page="menu.jsp"></jsp:include>
+		<!-- 이렇게 contents의 값만 계속 변하는 경우에는 template을 여러개 만든는것이 더 나은 방법일 수 있음 -->
 		<%
 			String id = request.getParameter("id");
 			String searchTitle = request.getParameter("searchTitle");
