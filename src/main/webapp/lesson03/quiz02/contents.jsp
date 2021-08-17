@@ -86,9 +86,9 @@
 			<img src="<%= artistInfo.get("photo") %>" height="200px">
 		</div>
 		<div class="mt-3">
-			<h2>아이유</h2>
-			EDAM엔터테인먼트<br>
-			2008 데뷔
+			<h2><%= artistInfo.get("name") %></h2>
+			<%= artistInfo.get("agency") %><br>
+			<%= artistInfo.get("debute") %> 데뷔
 		</div>
 	</section>
 	<section id="content2">
