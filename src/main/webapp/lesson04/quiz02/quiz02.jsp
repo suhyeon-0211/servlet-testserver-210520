@@ -22,7 +22,7 @@
 	String selectQuery = "select * from url_favorites";
 	ResultSet result = mysqlService.select(selectQuery);
 	
-	// DB 연결 끊기
+	
 	%>
 	<div class="container">
 		<table class="table text-center">
@@ -46,6 +46,10 @@
 				%>
 			</tbody>
 		</table>
+		<%
+		// DB 연결 끊기
+		mysqlService.disconnect();
+		%>
 		
 		<a href="/lesson04/quiz02/quiz02_add.jsp" class="btn btn-success">즐겨찾기 추가</a>
 	</div>
