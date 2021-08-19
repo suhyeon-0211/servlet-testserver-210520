@@ -34,7 +34,7 @@ public class Lesson04Quiz01Servlet extends HttpServlet {
 //			e.printStackTrace();
 //		}
 		
-		String selectQuery = "select address, area, `type` from real_estate order by `id` limit 10";
+		String selectQuery = "select address, area, `type` from real_estate order by `id` DESC limit 10";
 		try {
 			ResultSet result = mysqlService.select(selectQuery);
 			PrintWriter out = response.getWriter();
