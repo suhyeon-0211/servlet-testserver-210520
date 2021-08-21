@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+header {background-color: #FAAC58; color: white; height: 80px;}
+
+nav {background-color: #FAAC58;}
+nav a {text-decoration: none; color:white;}
+
+.selling_product {border: 2px solid #FAAC58;}
+.selling_product:hover {background-color: #FAAC58;}
+.user_id {color: #FAAC58;}
